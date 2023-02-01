@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding-right: 20px;
+        }
+
+        .resultBlock {
+            padding: 20px;
+            background: #f6f6f6;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.2/imask.min.js"
+        integrity="sha512-l0grYOI8XZga5TajPOiqLrQVCKrdh+k0QSEtS+cpJlNeI8Nu9GOhsVaFyFQuPQfYp02GnhsyHqkPR7P7BTKYAQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</head>
+
+<body>
+    <div style="padding-top:20px;" class="container">
+        <div class="controls" style="display: grid; gap: 10px">
+            <label for="name">Имя</label>
+            <input style="padding:10px;" id="name" value="Димка">
+            <label for="surname">Фамилия</label>
+            <input style="padding:10px;" id="surname" value="Веремейкин">
+            <label for="position">Должность</label>
+            <input style="padding:10px;" id="position" value="Должность тоже ничё такая">
+            <label for="phone">Телефон</label>
+            <input style="padding:10px;" id="phone" value="+ 7 123 456 78 90">
+
+            <button style="padding:10px;" type="button" onclick="copy()">Скопировать подпись</button>
+        </div>
+        <div class="resultBlock">
+            <span>Превью:</span>
+            <div class="result" id="signResult">
+                <table bgcolor="transparent" border="0" cellpadding="0" cellspacing="0" style="padding-top: 62px; background-color: transparent; border: 0">
+                    <tbody style="background-color: transparent; border: 0">
+                    <tr style="background-color: transparent; border: 0">
+                        <td style="background-color: transparent; border: 0"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table id="sign"
+                       bgcolor="white"
+                    style="width: 500px; background-color: rgb(255, 255, 255); border-spacing: 0px;color:rgb(0,0,0);font-size:medium;overflow: hidden;">
+                    <tbody style="background-color: rgb(255, 255, 255);">
+                        <tr style="background-color: rgb(255, 255, 255);">
+                            <td width="160" valign="middle" style="width:160px;vertical-align:middle;padding-right:25px;">
+                                <a href="https://payselection.com/" style="cursor:default;">
+                                    <img
+                                        src="https://i.imgur.com/u9Cz8J7.png"
+                                        style="width: 155px; height: 70px;color:rgb(34,34,34);font-size:small;white-space:normal"
+                                        width="155" height="70"></a>
+
+                            </td>
+                            <td width="250" valign="top"    
+                                style="background-color: rgb(255, 255, 255);vertical-align:top;padding-left:35px;padding-top:0px;padding-bottom:0px;border-left:1px solid #0b1e46;white-space:nowrap; min-height:1px;height:1px;">
+                                <table style="min-height:100%;border-spacing: 0px;">
+                                    <tbody>
+                                        <tr valign="top" style="padding:0px;">
+                                            <td
+                                                style="padding:0px">
+                                                <div
+                                                    style="font-weight:bold;font-size:20px;color:rgb(50,51,255);letter-spacing:0px;line-height:20px;padding-bottom:8px;">
+                                                    <span id="nameValue">Димка</span> <span
+                                                        id="surnameValue">Веремейкин</span>
+                                                </div>
+                                                <div style="font-size:14px;color:#010001;letter-spacing:0px;line-height:14px"
+                                                    id="positionValue">Должность тоже ничё такая</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-top:10px;">
+                                                <div style="color:#545c6b;font-size:14px;"
+                                                    id="phoneValue">
+                                                    +7 (123) 456-78-90
+                                                </div>
+                                                <div
+                                                    style="padding-top:10px;"
+                                                    style="color:#545c6b;font-size:14px;">
+                                                    <a style="color:#3233FF" href="https://payselection.com/"
+                                                        target="_blank">Payselection.com</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr style="padding:15px;" valign="bottom">
+                                            <td style="padding-top:15px;">
+                                                <div style="height:28px; min-height:28px;max-height:28px;">
+                                                    <a href="https://t.me/payselection"
+                                                        style="height:28px; width:28px;color:#fff;text-decoration:none" target="_blank">
+                                                        <img src="https://i.imgur.com/Ru5sg8h.png" style="height:28px;width: 28px;" width="28px" height="28px">
+                                                    </a>
+                                                    <a href="https://vk.com/payselectio"
+                                                        style="height:28px; width:28px;color:#fff;text-decoration:none" target="_blank">
+                                                        <img src="https://i.imgur.com/yWChr2D.png" style="height:28px; width:28px;" width="28px" height="28px">
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table border="0" cellpadding="0" cellspacing="0" style="padding-bottom: 62px; background-color: transparent; border: 0">
+                    <tbody style="background-color: transparent; border: 0">
+                    <tr style="background-color: transparent; border: 0">
+                        <td style="background-color: transparent; border: 0"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let nameControl = document.getElementById("name");
+        let nameElement = document.getElementById("nameValue");
+
+        let surnameControl = document.getElementById("surname");
+        let surnameElement = document.getElementById("surnameValue");
+
+        let positionControl = document.getElementById("position");
+        let positionElement = document.getElementById("positionValue");
+
+        let phoneControl = document.getElementById("phone");
+        let phoneElement = document.getElementById("phoneValue");
+
+        var maskOptions = {
+            mask: '+0 (000) 000-00-00'
+        };
+        var mask = IMask(phoneControl, maskOptions);
+
+        nameControl.addEventListener("input", (e) => {
+            nameElement.innerText = e.target.value;
+        });
+
+        surnameControl.addEventListener("input", (e) => {
+            surnameElement.innerText = e.target.value;
+        });
+
+        positionControl.addEventListener("input", (e) => {
+            positionElement.innerText = e.target.value;
+        });
+
+        phoneControl.addEventListener("input", (e) => {
+            phoneElement.innerText = e.target.value;
+        });
+
+        function copy() {
+            const sign = document.getElementById("signResult");
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(sign);
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            document.execCommand("copy");
+            selection.removeAllRanges();
+        }
+    </script>
+</body>
+
+</html>
